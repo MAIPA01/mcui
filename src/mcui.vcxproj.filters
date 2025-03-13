@@ -13,77 +13,59 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Menu">
+      <UniqueIdentifier>{5ff41b80-0ed3-4c69-9bce-19242b4c8963}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Input">
+      <UniqueIdentifier>{40043553-5fb4-412d-a33a-1335711974e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="pch.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\mcui.hpp">
+    <ClInclude Include="..\include\mcui.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\mcui_libs.hpp">
+    <ClInclude Include="..\include\mcui_libs.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\mcui_types.hpp">
+    <ClInclude Include="..\include\mcui_types.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\MenuElement.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\Input.hpp">
+      <Filter>Pliki nagłówkowe\Input</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\Menu.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\InputBuilder.hpp">
+      <Filter>Pliki nagłówkowe\Input</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\Option.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\InputElement.hpp">
+      <Filter>Pliki nagłówkowe\Input</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\MenuBuilder.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\InputSequence.hpp">
+      <Filter>Pliki nagłówkowe\Input</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\MenuViews.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\Menu.hpp">
+      <Filter>Pliki nagłówkowe\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\InputElement.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\MenuBuilder.hpp">
+      <Filter>Pliki nagłówkowe\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\Input.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\MenuElement.hpp">
+      <Filter>Pliki nagłówkowe\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\InputSequence.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="..\include\MenuViews.hpp">
+      <Filter>Pliki nagłówkowe\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\mcui\InputBuilder.hpp">
+    <ClInclude Include="..\include\MenuOption.hpp">
+      <Filter>Pliki nagłówkowe\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mcui_config.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuElement.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Option.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuBuilder.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuViews.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="InputBuilder.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="InputSequence.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="InputElement.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>

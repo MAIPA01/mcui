@@ -72,12 +72,18 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../../include;</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);../../lib;</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../include;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../../include;</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);../../lib;</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../include;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../include;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);../include;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -86,7 +92,9 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -103,7 +111,9 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -152,36 +162,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\mcui\Input.hpp" />
-    <ClInclude Include="..\..\include\mcui\InputBuilder.hpp" />
-    <ClInclude Include="..\..\include\mcui\InputElement.hpp" />
-    <ClInclude Include="..\..\include\mcui\InputSequence.hpp" />
-    <ClInclude Include="..\..\include\mcui\mcui.hpp" />
-    <ClInclude Include="..\..\include\mcui\mcui_libs.hpp" />
-    <ClInclude Include="..\..\include\mcui\mcui_types.hpp" />
-    <ClInclude Include="..\..\include\mcui\MenuElement.hpp" />
-    <ClInclude Include="..\..\include\mcui\Menu.hpp" />
-    <ClInclude Include="..\..\include\mcui\MenuBuilder.hpp" />
-    <ClInclude Include="..\..\include\mcui\Option.hpp" />
-    <ClInclude Include="..\..\include\mcui\MenuViews.hpp" />
-    <ClInclude Include="framework.hpp" />
+    <ClInclude Include="..\include\Input.hpp" />
+    <ClInclude Include="..\include\InputBuilder.hpp" />
+    <ClInclude Include="..\include\InputElement.hpp" />
+    <ClInclude Include="..\include\InputSequence.hpp" />
+    <ClInclude Include="..\include\mcui.hpp" />
+    <ClInclude Include="..\include\mcui_config.hpp" />
+    <ClInclude Include="..\include\mcui_libs.hpp" />
+    <ClInclude Include="..\include\mcui_types.hpp" />
+    <ClInclude Include="..\include\MenuElement.hpp" />
+    <ClInclude Include="..\include\Menu.hpp" />
+    <ClInclude Include="..\include\MenuBuilder.hpp" />
+    <ClInclude Include="..\include\MenuOption.hpp" />
+    <ClInclude Include="..\include\MenuViews.hpp" />
     <ClInclude Include="pch.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="InputBuilder.cpp" />
-    <ClCompile Include="InputElement.cpp" />
-    <ClCompile Include="InputSequence.cpp" />
-    <ClCompile Include="MenuElement.cpp" />
-    <ClCompile Include="MenuBuilder.cpp" />
-    <ClCompile Include="Option.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="MenuViews.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\mstd\mstd.vcxproj">
