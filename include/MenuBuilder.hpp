@@ -44,8 +44,8 @@ namespace mcui {
 
 #pragma region OPTION
 		template<class F, std::enable_if_t<_is_valid_option_function<F>, bool> = true>
-		static OptionSPtr makeOption(const std::string& name, const F& callback) {
-			return Option::create(name, callback);
+		static MenuOptionSPtr makeOption(const std::string& name, const F& callback) {
+			return MenuOption::create(name, callback);
 		}
 #pragma endregion // OPTION
 

@@ -33,8 +33,8 @@ namespace mcui {
 		virtual ~MenuOption() = default;
 
 		template<class F, std::enable_if_t<_is_valid_option_function<F>, bool> = true>
-		static OptionSPtr create(const std::string& name, const F& callback) {
-			return std::make_shared<Option>(name, callback);
+		static MenuOptionSPtr create(const std::string& name, const F& callback) {
+			return std::make_shared<MenuOption>(name, callback);
 		}
 
 		_option_callback_type getCallback() const {

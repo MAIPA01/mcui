@@ -16,7 +16,7 @@ namespace mcui {
 	struct YesNoMenuView;
 
 	class MenuElement;
-	class Option;
+	class MenuOption;
 	template<class _View>
 	class Menu;
 
@@ -30,7 +30,7 @@ namespace mcui {
 	};
 
 	using MenuElementSPtr = std::shared_ptr<MenuElement>;
-	using OptionSPtr = std::shared_ptr<Option>;
+	using MenuOptionSPtr = std::shared_ptr<MenuOption>;
 	template<class _View>
 	using MenuSPtr = std::shared_ptr<Menu<_View>>;
 

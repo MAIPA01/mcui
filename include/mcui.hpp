@@ -19,7 +19,6 @@
 #include "InputSequence.hpp"
 #include "InputBuilder.hpp"
 
-// TODO: oddzielne repo
 // TODO: add checkbox
 // TODO: add radio button
 // TODO: add progress bar

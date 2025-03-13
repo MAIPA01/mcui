@@ -42,10 +42,10 @@ namespace mcui {
 
 		std::vector<std::string> run() const override {
 			while (true) {
-				std::cout << getMessage();
+				std::cout << this->getMessage();
 
 				std::string value;
-				std::getline(cin, value);
+				std::getline(std::cin, value);
 
 				if (_is_optional && value == "") {
 					return std::vector<std::string>{ value };

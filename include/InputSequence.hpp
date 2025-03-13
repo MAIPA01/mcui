@@ -29,7 +29,7 @@ namespace mcui {
 		}
 
 		std::vector<std::string> run() const override {
-			const std::string& message = getMessage();
+			const std::string& message = this->getMessage();
 			if (message != "") std::cout << message << std::endl;
 
 			std::vector<std::string> values = {};

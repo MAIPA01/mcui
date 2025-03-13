@@ -42,7 +42,7 @@ namespace mcui {
 	};
 
 	struct YesNoMenuView {
-		static void printView(const std::string& menu_name,
+		static void printView(const std::string& message,
 			const mstd::ordered_map<std::string, MenuElementSPtr>& elements) {
 			// print message
 			std::cout << message << " (Y/n): ";
